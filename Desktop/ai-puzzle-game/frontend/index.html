@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Human Puzzle Challenge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              arcade: {
+                bg: '#0a0a12',
+                panel: '#12121f',
+                blue: '#00d4ff',
+                purple: '#a855f7',
+                pink: '#ec4899',
+                green: '#22c55e',
+                yellow: '#eab308',
+              }
+            },
+            fontFamily: {
+              display: ['Orbitron', 'system-ui', 'sans-serif'],
+              body: ['Inter', 'system-ui', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-arcade-bg text-white font-body antialiased">
+    <div id="root"></div>
+<script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

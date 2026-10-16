@@ -1,0 +1,231 @@
+/* =========================================
+HUMANPUZZLE — ARCADE GAME SCREENS
+Navy + Ice Blue
+========================================= */
+
+.arcade-app {
+--arcade-bg: #080d1a;
+--arcade-panel: #111a2d;
+--arcade-blue: #72d5ff;
+--arcade-blue-dark: #329ed5;
+--arcade-text: #f0f6ff;
+--arcade-muted: #91a3bd;
+
+min-height: 100vh;
+color: var(--arcade-text);
+background:
+radial-gradient(ellipse at 50% 0%, #152747 0%, transparent 55%),
+var(--arcade-bg);
+font-family: Inter, system-ui, sans-serif;
+}
+
+/* Main game panels */
+.arcade-app .arcade-panel {
+width: 100%;
+max-width: 1000px;
+padding: 28px;
+border: 1px solid rgba(114, 213, 255, 0.18);
+border-radius: 24px;
+background: rgba(17, 26, 45, 0.92);
+box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+}
+
+/* Headings */
+.arcade-app h1,
+.arcade-app h2,
+.arcade-app h3 {
+color: var(--arcade-text);
+letter-spacing: -0.035em;
+}
+
+.arcade-app h1 {
+font-weight: 850;
+}
+
+.arcade-app p {
+line-height: 1.65;
+}
+
+/* Inputs */
+.arcade-app input:not([type="checkbox"]),
+.arcade-app select {
+width: 100%;
+min-height: 48px;
+padding: 12px 15px;
+color: var(--arcade-text);
+background: #0a1222;
+border: 1px solid #2b3d58;
+border-radius: 12px;
+outline: none;
+transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.arcade-app input:focus,
+.arcade-app select:focus {
+border-color: var(--arcade-blue);
+box-shadow: 0 0 0 3px rgba(114, 213, 255, 0.12);
+}
+
+.arcade-app input::placeholder {
+color: #71829b;
+}
+
+/* Buttons */
+.arcade-app button {
+transition:
+transform 0.18s ease,
+background-color 0.18s ease,
+border-color 0.18s ease,
+box-shadow 0.18s ease;
+}
+
+.arcade-app button:disabled {
+cursor: not-allowed;
+opacity: 0.45;
+}
+
+.arcade-app button:not(:disabled):hover {
+transform: translateY(-2px);
+}
+
+.arcade-app button:not(:disabled):active {
+transform: translateY(0) scale(0.98);
+}
+
+/* Primary button: also works with common Tailwind blue backgrounds */
+.arcade-app button.bg-blue-600,
+.arcade-app button.bg-blue-500 {
+color: #06111f;
+background: var(--arcade-blue);
+border: 1px solid transparent;
+border-radius: 12px;
+font-weight: 800;
+box-shadow: 0 6px 24px rgba(114, 213, 255, 0.12);
+}
+
+.arcade-app button.bg-blue-600:not(:disabled):hover,
+.arcade-app button.bg-blue-500:not(:disabled):hover {
+background: #a1e5ff;
+box-shadow: 0 8px 28px rgba(114, 213, 255, 0.2);
+}
+
+/* Secondary buttons */
+.arcade-app button.border,
+.arcade-app button.border-white,
+.arcade-app button.border-gray-300 {
+border-color: #344863;
+border-radius: 12px;
+}
+
+/* Camera */
+.arcade-app video,
+.arcade-app canvas {
+max-width: 100%;
+border-radius: 18px;
+}
+
+.arcade-app video {
+background: #030712;
+border: 1px solid rgba(114, 213, 255, 0.25);
+object-fit: cover;
+}
+
+/* Camera and detection status */
+.arcade-app .text-green-600,
+.arcade-app .text-green-500 {
+color: #71f0b0;
+}
+
+.arcade-app .text-red-600,
+.arcade-app .text-red-500 {
+color: #ff858e;
+}
+
+/* Puzzle board */
+.arcade-app .grid {
+gap: 10px;
+}
+
+.arcade-app .grid > div {
+min-width: 0;
+}
+
+.arcade-app [draggable="true"] {
+cursor: grab;
+}
+
+.arcade-app [draggable="true"]:active {
+cursor: grabbing;
+}
+
+/* Puzzle pieces */
+.arcade-app img {
+max-width: 100%;
+}
+
+.arcade-app .rounded-lg,
+.arcade-app .rounded-xl,
+.arcade-app .rounded-2xl {
+border-radius: 14px;
+}
+
+/* Score and timer cards */
+.arcade-app .bg-gray-100,
+.arcade-app .bg-gray-50,
+.arcade-app .bg-white {
+color: var(--arcade-text);
+background: var(--arcade-panel);
+border: 1px solid rgba(114, 213, 255, 0.12);
+}
+
+/* Progress indicators */
+.arcade-app .bg-blue-600 {
+background-color: var(--arcade-blue);
+}
+
+/* Leaderboard and result screens */
+.arcade-app li,
+.arcade-app tr {
+border-color: rgba(145, 163, 189, 0.15);
+}
+
+.arcade-app .text-gray-500,
+.arcade-app .text-gray-600,
+.arcade-app .text-gray-700 {
+color: var(--arcade-muted);
+}
+
+/* Responsive layout */
+@media (max-width: 640px) {
+.arcade-app {
+padding: 16px !important;
+}
+
+.arcade-app .arcade-panel {
+padding: 18px;
+border-radius: 18px;
+}
+
+.arcade-app h1 {
+font-size: clamp(1.7rem, 7vw, 2.5rem);
+}
+
+.arcade-app .grid {
+gap: 6px;
+}
+
+.arcade-app video {
+max-height: 55vh;
+}
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+.arcade-app *,
+.arcade-app *::before,
+.arcade-app *::after {
+animation-duration: 0.01ms !important;
+transition-duration: 0.01ms !important;
+scroll-behavior: auto !important;
+}
+}
