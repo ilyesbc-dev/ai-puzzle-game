@@ -3,7 +3,7 @@
 Interactive webcam puzzle game  
 YOLOv8 detects a person → capture photo → shuffle into puzzle pieces → solve before the timer ends → climb the leaderboard.
 
-## Architecture :
+## Architecture  :
 
 ```
 ai-puzzle-game/
