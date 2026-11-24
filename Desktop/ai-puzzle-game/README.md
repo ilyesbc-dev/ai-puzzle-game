@@ -42,8 +42,3 @@ ai-puzzle-game/
 
 
 
-
-- Rectangular tiles only (reliable completion check).
-- Score = base (1000/2000/3000) + remaining seconds × 15.
-- Compatible with Windows; tested with Python 3.12 + Node 20.
-- No paid APIs or cloud services required.
